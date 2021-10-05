@@ -34,7 +34,9 @@ export function SituationProvider({
 	children,
 	situation,
 }: SituationProviderProps) {
+	console.log('child', children, situation)
 	const engine = useContext(EngineContext)
+	console.log('engine', engine)
 	engine.setSituation(situation)
 	return (
 		<EngineContext.Provider value={engine}>{children}</EngineContext.Provider>

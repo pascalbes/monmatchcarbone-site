@@ -5,6 +5,8 @@ const catégories = [
 	'vêtements',
 	'divers',
 	'nourriture',
+	'equipements',
+	'compétition',
 ]
 const catégorie = ({ catégorie, dottedName }) => {
 	if (catégorie && catégories.includes(catégorie)) return catégorie

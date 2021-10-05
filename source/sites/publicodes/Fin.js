@@ -38,6 +38,7 @@ export default ({}) => {
 	const query = new URLSearchParams(useLocation().search)
 	const details = query.get('details')
 
+	console.log(details, query)
 	// details=a2.6t2.1s1.3l1.0b0.8f0.2n0.1
 	const encodedDetails = details,
 		rehydratedDetails =
@@ -50,6 +51,8 @@ export default ({}) => {
 				.map(([category, ...rest]) =>
 					category === 'b' ? ['d', ...rest] : [category, ...rest]
 				)
+	
+	console.log(details)
 
 	const score = sumFromDetails(rehydratedDetails)
 	const headlessMode =

@@ -66,6 +66,70 @@ Choisissez 14 plats qui représentent votre semaine type : 7 midi et 7 dîners.
 			dottedName.includes(' . nombre'),
 		component: NumberedMosaic,
 	},
+	{
+		dottedName: 'compétition . déplacements',
+		question: 'A quelle échelle se font ces compétitions ? ',
+		isApplicable: (dottedName: DottedName) =>
+			dottedName.includes('compétition . déplacements ') &&
+			dottedName.includes(' . présent'),
+		component: SelectDevices,
+	},
+	{
+		dottedName: 'transport',
+		question: 'Quels moyens de transport utilisez-vous pour vous rendre sur votre ou vos lieux d’activités sportives ?',
+		isApplicable: (dottedName: DottedName) =>
+			dottedName.includes('transport ') &&
+			dottedName.includes(' . présent'),
+		component: SelectDevices,
+	},
+	{
+		dottedName: 'profil . sport',
+		question: 'Quels sports pratiquez-vous ?',
+		isApplicable: (dottedName: DottedName) =>
+			dottedName.includes('profil . sport ') &&
+			dottedName.includes(' . présent'),
+		component: SelectDevices,
+	},
+	{
+		dottedName: 'equipements . textile',
+		question: 'Sur une saison, quels vêtements achetez-vous ?',
+		isApplicable: (dottedName: DottedName) =>
+			dottedName.includes('equipements . textile') &&
+			dottedName.includes(' . nombre'),
+		component: NumberedMosaic,
+	},
+	{
+		dottedName: 'alimentation . compléments',
+		question: 'Durant l\'effort, consommez-vous des compléments alimentaires ?',
+		isApplicable: (dottedName: DottedName) =>
+			dottedName.includes('alimentation . compléments') &&
+			dottedName.includes(' . nombre'),
+		component: NumberedMosaic,
+	},
+	{
+		dottedName: 'spectateur . numérique',
+		question: 'Combien d’heure par mois passez vous à regarder du sport sur les supports suivants ?',
+		isApplicable: (dottedName: DottedName) =>
+			dottedName.includes('spectateur . numérique') &&
+			dottedName.includes(' . nombre'),
+		component: NumberedMosaic,
+	},
+	{
+		dottedName: 'compétition . déplacements . Internationale',
+		question: 'Echelle Internationale : combien d\'heures passez vous par moyen de transport pour vos déplacements ?',
+		isApplicable: (dottedName: DottedName) =>
+			dottedName.includes('compétition . déplacements . Internationale') &&
+			dottedName.includes(' . nombre'),
+		component: NumberedMosaic,
+	},
+	// {
+	// 	dottedName: 'équipement . matériel',
+	// 	question: 'Quels sports pratiquez-vous ?',
+	// 	isApplicable: (dottedName: DottedName) =>
+	// 		dottedName.includes('équipement . matériel ') &&
+	// 		dottedName.includes(' . nombre'),
+	// 	component: NumberedMosaic,
+	// },
 ]
 
 export default mosaicQuestions

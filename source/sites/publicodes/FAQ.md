@@ -102,6 +102,16 @@ Néanmoins, NGC est un outil libre d’accès où la contribution de tous est po
 
 On vous explique comment [ici](https://github.com/betagouv/ecolab-data/issues/185).
 
+## AAALIM
+
+### Dois-je renseigner mes déplacements pro ?
+
+Non.
+
+NGC est dédié à l’évaluation de **l’empreinte carbone individuelle**. Les déplacements que vous effectuez dans le cadre de votre travail comme livrer un client, se rendre à une réunion, prendre l’avion pour assister à 3 jours de séminaire, etc. ne sont pas à prendre en compte quand vous répondez aux questions du calculateur.
+
+Ces déplacements relevant de l’activité professionnelle seront comptabilisés dans l’empreinte carbone de votre organisation (entreprise, collectivité, association, etc). On parle alors de bilans d’émissions de Gaz à Effet de Serre (BEGES).
+
 ## TRANSPORT
 
 ### Dois-je renseigner mes déplacements pro ?
