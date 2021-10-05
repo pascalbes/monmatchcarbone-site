@@ -37,6 +37,7 @@ module.exports = {
 		}),
 		new webpack.DefinePlugin({
 			NODE_ENV: JSON.stringify('production'),
+			'process.env.MODEL_URL': process.env.MODEL_URL
 		}),
 	],
 }
