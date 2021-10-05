@@ -59,13 +59,7 @@ export default function Root({}) {
 				previousSimulation: retrievePersistedSimulation(),
 				iframeOptions: { iframeShareData },
 			}}
-			rulesURL={`https://${
-				branch
-					? `${branch}--`
-					: pullRequestNumber
-					? `deploy-preview-${pullRequestNumber}--`
-					: ''
-			}ecolab-data.netlify.app/co2.json`}
+			rulesURL={process.env.MODEL_URL}
 			dataBranch={branch || pullRequestNumber}
 		>
 			<Router />
