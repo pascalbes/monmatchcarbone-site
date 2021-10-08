@@ -12,7 +12,17 @@ const {
 module.exports = {
 	...common,
 	module: {
-		rules: [...commonLoaders('development'), styleLoader('style-loader')],
+		rules: [...commonLoaders('development'), styleLoader('style-loader'),
+		{
+			test: /node_modules\/vfile\/core\.js/,
+			use: [{
+			  loader: 'imports-loader',
+			  options: {
+				type: 'commonjs',
+				imports: ['single process/browser process'],
+			  },
+			}],
+		  },],
 	},
 	devServer: {
 		historyApiFallback: true,
@@ -25,6 +35,7 @@ module.exports = {
 		...HTMLPlugins({ injectTrackingScript: true }),
 		new webpack.DefinePlugin({
 			NODE_ENV: JSON.stringify('development'),
+			'process.env.MODEL_URL': JSON.stringify(process.env.MODEL_URL)
 		}),
 		new webpack.HotModuleReplacementPlugin(),
 		new ReactRefreshWebpackPlugin(),

@@ -73,7 +73,7 @@ const Router = ({}) => {
 		<>
 			<div className="ui__ container">
 				<ConferenceBarLazy />
-				<nav css="display: flex; justify-content: center; margin: .6rem auto">
+				<nav css="display: flex; justify-content: center; margin: .2rem auto">
 					<Link
 						to="/"
 						css={`
@@ -81,7 +81,6 @@ const Router = ({}) => {
 							align-items: center;
 							text-decoration: none;
 							font-size: 170%;
-							margin-bottom: 0.4rem;
 							@media (max-width: 800px) {
 								margin-bottom: 0;
 							}
