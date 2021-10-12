@@ -48,9 +48,15 @@ export default function SelectDevices({
 									)
 								}
 							>
-								{icônes && <div css="font-size: 150%">{emoji(icônes)}</div>}
 								<h4>{title}</h4>
-								{false && description && <p>{description.split('\n')[0]}</p>}
+								<div
+									css={`
+										${!description ? 'font-size: 150%' : ''}
+									`}
+								>
+									{icônes && emoji(icônes)}
+								</div>
+								{description && <p>{description.split('\n')[0]}</p>}
 								<div css={'font-size: 1.8rem'}>
 									<Checkbox
 										name={name}
