@@ -92,7 +92,7 @@ Choisissez 14 plats qui représentent votre semaine type : 7 midi et 7 dîners.
 	},
 	{
 		dottedName: 'equipements . textile',
-		question: 'Sur une saison, quels vêtements achetez-vous ?',
+		question: 'Sur une saison, combien de vêtements achetez-vous pour vos pratiques sportives ?',
 		isApplicable: (dottedName: DottedName) =>
 			dottedName.includes('equipements . textile') &&
 			dottedName.includes(' . nombre'),
@@ -100,15 +100,23 @@ Choisissez 14 plats qui représentent votre semaine type : 7 midi et 7 dîners.
 	},
 	{
 		dottedName: 'alimentation . compléments',
-		question: 'Durant l\'effort, consommez-vous des compléments alimentaires ?',
+		question: 'Durant l\'effort, combien de compléments alimentaires consommez-vous sur un mois ?',
 		isApplicable: (dottedName: DottedName) =>
 			dottedName.includes('alimentation . compléments') &&
 			dottedName.includes(' . nombre'),
 		component: NumberedMosaic,
 	},
 	{
+		dottedName: 'spectateur . déplacements . nationale ou internationale',
+		question: 'Echelle Nationale ou Internationale : combien d\'heures passez vous par moyen de transport pour vos déplacements sur une année ?',
+		isApplicable: (dottedName: DottedName) =>
+			dottedName.includes('spectateur . déplacements . nationale ou internationale') &&
+			dottedName.includes(' . nombre'),
+		component: NumberedMosaic,
+	},
+	{
 		dottedName: 'spectateur . numérique',
-		question: 'Combien d’heure par mois passez vous à regarder du sport sur les supports suivants ?',
+		question: 'Combien d’heures par semaine passez vous à regarder du sport sur les supports suivants ?',
 		isApplicable: (dottedName: DottedName) =>
 			dottedName.includes('spectateur . numérique') &&
 			dottedName.includes(' . nombre'),
@@ -116,7 +124,7 @@ Choisissez 14 plats qui représentent votre semaine type : 7 midi et 7 dîners.
 	},
 	{
 		dottedName: 'compétition . déplacements . Internationale',
-		question: 'Echelle Internationale : combien d\'heures passez vous par moyen de transport pour vos déplacements ?',
+		question: 'Echelle Internationale : combien d\'heures passez vous par moyen de transport pour vos déplacements sur une année ?',
 		isApplicable: (dottedName: DottedName) =>
 			dottedName.includes('compétition . déplacements . Internationale') &&
 			dottedName.includes(' . nombre'),
