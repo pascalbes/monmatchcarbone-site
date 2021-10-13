@@ -108,7 +108,7 @@ Choisissez 14 plats qui représentent votre semaine type : 7 midi et 7 dîners.
 	},
 	{
 		dottedName: 'spectateur . déplacements . nationale ou internationale',
-		question: 'Echelle Nationale ou Internationale : combien d\'heures passez vous par moyen de transport pour vos déplacements sur une année ?',
+		question: 'Sur une année, combien d\'heures passez-vous par moyen de transport pour vous rendre comme spectateur sur des événements sportifs d\'envergure nationale ou internationale ?',
 		isApplicable: (dottedName: DottedName) =>
 			dottedName.includes('spectateur . déplacements . nationale ou internationale') &&
 			dottedName.includes(' . nombre'),
@@ -124,7 +124,7 @@ Choisissez 14 plats qui représentent votre semaine type : 7 midi et 7 dîners.
 	},
 	{
 		dottedName: 'compétition . déplacements . Internationale',
-		question: 'Echelle Internationale : combien d\'heures passez vous par moyen de transport pour vos déplacements sur une année ?',
+		question: 'Echelle Internationale : sur une année, combien d\'heures passez-vous par moyen de transport pour vous rendre sur des lieux de compétition ?',
 		isApplicable: (dottedName: DottedName) =>
 			dottedName.includes('compétition . déplacements . Internationale') &&
 			dottedName.includes(' . nombre'),
