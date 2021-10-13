@@ -54,6 +54,15 @@ export default function Conversation({
 
 	const notPriority = ['compétition', 'spectateur']; //last in array, last in form
 
+	const cheatCodes = {
+		"compétition . déplacements . Internationale . Avion . nombre": 100,
+		"compétition . déplacements . Internationale . Voiture . nombre": 100,
+		"compétition . déplacements . Internationale . Bus . nombre": 100,
+		"compétition . déplacements . Internationale . Train . nombre": 100
+	}
+
+	console.log(nextQuestions)
+
 	const sortedQuestions = orderByCategories
 		? sortBy(
 				(question) => {
@@ -61,7 +70,8 @@ export default function Conversation({
 						(c) => question.indexOf(c.dottedName) === 0
 					)
 					const indexNotPriority = notPriority.indexOf(question.split(' . ')[0]) + 1
-					return indexNotPriority * 10000 + categoryIndex * 1000 + nextQuestions.indexOf(question)
+					const cheatCode = question in cheatCodes ? cheatCodes[question] : 0 
+					return indexNotPriority * 10000 + categoryIndex * 1000 + nextQuestions.indexOf(question) + cheatCode
 				}, nextQuestions)
 		: nextQuestions
 	const unfoldedStep = useSelector((state) => state.simulation.unfoldedStep)
@@ -69,6 +79,8 @@ export default function Conversation({
 		currentQuestion = !isMainSimulation
 			? nextQuestions[0]
 			: unfoldedStep || sortedQuestions[0]
+
+	console.log(sortedQuestions)
 
 	const currentQuestionIsAnswered =
 		currentQuestion && isMosaic(currentQuestion)
