@@ -51,13 +51,18 @@ export default function Conversation({
 	const rawRules = useSelector((state) => state.rules)
 	const previousSimulation = useSelector((state) => state.previousSimulation)
 
+
+	const notPriority = ['compétition', 'spectateur']; //last in array, last in form
+
 	const sortedQuestions = orderByCategories
 		? sortBy(
-				(question) =>
-					-orderByCategories.find((c) => question.indexOf(c.dottedName) === 0)
-						?.nodeValue,
-				nextQuestions
-		  )
+				(question) => {
+					const categoryIndex = orderByCategories.findIndex(
+						(c) => question.indexOf(c.dottedName) === 0
+					)
+					const indexNotPriority = notPriority.indexOf(question.split(' . ')[0]) + 1
+					return indexNotPriority * 10000 + categoryIndex * 1000 + nextQuestions.indexOf(question)
+				}, nextQuestions)
 		: nextQuestions
 	const unfoldedStep = useSelector((state) => state.simulation.unfoldedStep)
 	const isMainSimulation = objectifs.length === 1 && objectifs[0] === 'bilan',
