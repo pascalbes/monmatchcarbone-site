@@ -59,12 +59,12 @@ Choisissez 14 plats qui représentent votre semaine type : 7 midi et 7 dîners.
 		options: { chipsTotal: 14 },
 	},
 	{
-		dottedName: 'divers . textile',
-		question: 'Quels vêtements achetez-vous en général dans une année ?',
+		dottedName: 'spectateur . déplacements',
+		question: 'A quelles échelles vous déplacez-vous pour assister à des événements sportifs ? ',
 		isApplicable: (dottedName: DottedName) =>
-			dottedName.includes('divers . textile') &&
-			dottedName.includes(' . nombre'),
-		component: NumberedMosaic,
+			dottedName.includes('spectateur . déplacements ') &&
+			dottedName.includes(' . présent'),
+		component: SelectDevices,
 	},
 	{
 		dottedName: 'compétition . déplacements',

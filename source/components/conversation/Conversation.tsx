@@ -58,7 +58,11 @@ export default function Conversation({
 		"compétition . déplacements . Internationale . Avion . nombre": 100,
 		"compétition . déplacements . Internationale . Voiture . nombre": 100,
 		"compétition . déplacements . Internationale . Bus . nombre": 100,
-		"compétition . déplacements . Internationale . Train . nombre": 100
+		"compétition . déplacements . Internationale . Train . nombre": 100,
+		"spectateur . déplacements . nationale ou internationale . Avion . nombre": 100,
+		"spectateur . déplacements . nationale ou internationale . Voiture . nombre": 100,
+		"spectateur . déplacements . nationale ou internationale . Bus . nombre": 100,
+		"spectateur . déplacements . nationale ou internationale . Train . nombre": 100,
 	}
 
 	console.log(nextQuestions)
