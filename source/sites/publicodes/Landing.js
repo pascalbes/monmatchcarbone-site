@@ -38,17 +38,19 @@ export default () => {
 						Faire le test
 					</Link>
 				</div>
-				<div css="margin: .6rem 0 1rem;">
+				{/* <div css="margin: .6rem 0 1rem;">
 					<Link to="/conférence" className="ui__ button small">
 						{emoji('👥')} Faire le test à plusieurs
 					</Link>
-				</div>
+				</div> */}
 				<NewsBanner />
 			</div>
 
 			<footer>
 				<div
 					css={`
+						margin-left: 10%;
+						width: 80%;
 						display: flex;
 						align-items: center;
 						justify-content: center;
@@ -58,19 +60,7 @@ export default () => {
 						}
 					`}
 				>
-					<img css="height: 6rem; margin-right: .6rem" src={Marianne} />
-					<a href="https://ademe.fr">
-						<img
-							css="height: 5rem; margin-right: .6rem"
-							src="https://www.ademe.fr/sites/all/themes/ademe/logo.png"
-						/>
-					</a>
-					<a href="https://www.associationbilancarbone.fr/">
-						<img
-							css="height: 2.5rem"
-							src="https://www.associationbilancarbone.fr/wp-content/themes/abc/assets/images/brand/abc_main_logo.svg"
-						/>
-					</a>
+					<p>Cette déclinaison, développée par <a href="https://www.bl-evolution.com/" target="_blank">BL évolution</a>, s'appuie librement sur la version officielle de <a href="https://nosgestesclimat.fr/" target="_blank">Nos Gestes Climat</a> développé par <a href="https://www.associationbilancarbone.fr/" target="_blank">l'ABC</a> et <a href="https://datagir.ademe.fr/" target="_blank">Datagir (ADEME)</a>.</p>
 				</div>
 				<div
 					css={`
