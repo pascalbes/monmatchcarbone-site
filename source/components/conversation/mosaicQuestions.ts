@@ -83,10 +83,10 @@ Choisissez 14 plats qui représentent votre semaine type : 7 midi et 7 dîners.
 		component: SelectDevices,
 	},
 	{
-		dottedName: 'profil . sport',
+		dottedName: 'equipements . pratique',
 		question: 'Quels sports pratiquez-vous ?',
 		isApplicable: (dottedName: DottedName) =>
-			dottedName.includes('profil . sport ') &&
+			dottedName.includes('equipements . pratique ') &&
 			dottedName.includes(' . présent'),
 		component: SelectDevices,
 	},

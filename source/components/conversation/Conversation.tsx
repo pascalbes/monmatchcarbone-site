@@ -52,7 +52,7 @@ export default function Conversation({
 	const previousSimulation = useSelector((state) => state.previousSimulation)
 
 
-	const notPriority = ['equipements', 'compétition', 'spectateur']; //last in array, last in form
+	const notPriority = ['compétition', 'spectateur']; //last in array, last in form
 
 	const cheatCodes = {
 		"compétition . déplacements . Internationale . Avion . nombre": 100,
