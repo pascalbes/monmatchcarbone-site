@@ -65,8 +65,6 @@ export default function Conversation({
 		"spectateur . déplacements . nationale ou internationale . Train . nombre": 100,
 	}
 
-	console.log(nextQuestions)
-
 	const sortedQuestions = orderByCategories
 		? sortBy(
 				(question) => {
@@ -83,8 +81,6 @@ export default function Conversation({
 		currentQuestion = !isMainSimulation
 			? nextQuestions[0]
 			: unfoldedStep || sortedQuestions[0]
-
-	console.log(sortedQuestions)
 
 	const currentQuestionIsAnswered =
 		currentQuestion && isMosaic(currentQuestion)
