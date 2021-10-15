@@ -1,6 +1,6 @@
 {
-	"name": "Nos gestes climat",
-	"description": "Calcule ton empreinte sur le climat",
+	"name": "Mon Match Carbone",
+	"description": "Calcule l'empreinte de ta pratique sportive sur le climat",
 	"display": "standalone",
 	"lang": "fr",
 	"orientation": "portrait-primary",
