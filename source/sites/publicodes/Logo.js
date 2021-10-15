@@ -16,15 +16,13 @@ export const InlineLogo = () => {
 		<div
 			css={`
 				display: flex;
-				justify-content: space-between;
+				justify-content: center;
 				align-items: center;
+				margin: 4px 0;
 				@media (max-width: 800px) {
 					flex-direction: column;
 					justify-content: center;
 					align-items: center;
-				}
-				> span {
-					color: black;
 				}
 			`}
 		>
@@ -44,10 +42,14 @@ export const InlineLogo = () => {
 				</>
 			)}
 
-			<NosGestesClimatInline />
+			<MMCInline />
 		</div>
 	)
 }
+
+const MMCInline = () => (
+	<img style={{maxWidth: '200px'}} src="MMC_inline.png" alt="Logo Mon Match Carbone" />
+)
 
 const NosGestesClimatInline = () => (
 	<span

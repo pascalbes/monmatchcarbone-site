@@ -42,6 +42,7 @@ module.exports.default = {
 			'./source/images/nosgestesclimat.png',
 			'./source/images/dessin-nosgestesclimat.png',
 			'./source/images/MMC.jpg',
+			'./source/images/MMC_inline.png',
 			{
 				from: './source/data',
 				to: 'data',
