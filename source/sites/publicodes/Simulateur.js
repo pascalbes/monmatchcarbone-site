@@ -22,6 +22,7 @@ import emoji from 'react-easy-emoji'
 import { situationSelector } from '../../selectors/simulationSelectors'
 import BandeauContribuer from './BandeauContribuer'
 import { sessionBarMargin } from '../../components/SessionBar'
+import { GELogo } from './Logo'
 
 const eqValues = compose(isEmpty, symmetricDifference)
 
@@ -86,6 +87,15 @@ const Simulateur = (props) => {
 				title={rule.title}
 			/>
 			<BandeauContribuer />
+			<div css={`
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 10px 0 20px;
+				`}>
+				<GELogo width="150px"/>
+			</div>
 		</div>
 	)
 }

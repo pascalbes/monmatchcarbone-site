@@ -4,6 +4,7 @@ import Illustration from './images/ecolab-climat-dessin.svg'
 import Marianne from './images/Marianne.png'
 import emoji from 'react-easy-emoji'
 import NewsBanner from '../../components/NewsBanner'
+import { GELogo } from './Logo'
 
 export default () => {
 	return (
@@ -35,7 +36,7 @@ export default () => {
 			<div css="margin-bottom: 1rem">
 				<div css="margin: 1rem 0 .6rem;">
 					<Link to="/simulateur/bilan" className="ui__ plain button">
-						Faire le test
+						Commencez votre match
 					</Link>
 				</div>
 				{/* <div css="margin: .6rem 0 1rem;">
@@ -49,8 +50,8 @@ export default () => {
 			<footer>
 				<div
 					css={`
-						margin-left: 10%;
-						width: 80%;
+						margin-left: 5%;
+						width: 90%;
 						display: flex;
 						align-items: center;
 						justify-content: center;
@@ -60,8 +61,18 @@ export default () => {
 						}
 					`}
 				>
-					<p>Cette déclinaison, développée par <a href="https://www.bl-evolution.com/" target="_blank">BL évolution</a>, s'appuie librement sur la version officielle de <a href="https://nosgestesclimat.fr/" target="_blank">Nos Gestes Climat</a> développé par <a href="https://www.associationbilancarbone.fr/" target="_blank">l'ABC</a> et <a href="https://datagir.ademe.fr/" target="_blank">Datagir (ADEME)</a>.</p>
+					<p>Cette déclinaison, développée par <a href="https://www.gamearth.green/" target="_blank">Game Earth</a> avec <a href="https://www.bl-evolution.com/" target="_blank">BL Évolution</a>, s'appuie librement sur la version officielle de <a href="https://nosgestesclimat.fr/" target="_blank">Nos Gestes Climat</a> développé par <a href="https://www.associationbilancarbone.fr/" target="_blank">l'ABC</a> et <a href="https://datagir.ademe.fr/" target="_blank">Datagir (ADEME)</a>.</p>
 				</div>
+				<div css={`
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 10px 0 20px;
+				`}>
+					<GELogo	/>
+				</div>
+				
 				<div
 					css={`
 						display: flex;

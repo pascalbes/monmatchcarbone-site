@@ -16,6 +16,7 @@ import DefaultFootprint from './DefaultFootprint'
 import IframeDataShareModal from './IframeDataShareModal'
 import BallonGES from './images/ballonGES.svg'
 import StartingBlock from './images/starting block.svg'
+import { GELogo } from './Logo'
 
 const gradient = tinygradient([
 		'#78e08f',
@@ -271,6 +272,15 @@ const AnimatedDiv = animated(({ score, value, details, headlessMode }) => {
 
 				{integratorActionText && <ActionButton text="Réduire mon empreinte" />}
 			</motion.div>
+			<div css={`
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 30px 0 10px;
+				`}>
+				<GELogo width="150px"/>
+			</div>
 		</div>
 	)
 })

@@ -9,6 +9,16 @@ export default () => (
 	</span>
 )
 
+export const GELogo = (props) => {
+	const { width } = props;
+	const maxWidth = width ? width : "200px"
+	return (
+		<img src="Logo Game Earth.png" alt="logo Game Earth" css={`
+			max-width: ${maxWidth}
+		`}/>
+	)
+}
+
 export const InlineLogo = () => {
 	const { integratorLogo, integratorName } = useContext(IframeOptionsContext)
 

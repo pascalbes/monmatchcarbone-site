@@ -43,6 +43,7 @@ module.exports.default = {
 			'./source/images/dessin-nosgestesclimat.png',
 			'./source/images/MMC.jpg',
 			'./source/images/MMC_inline.png',
+			'./source/images/Logo Game Earth.png',
 			{
 				from: './source/data',
 				to: 'data',
