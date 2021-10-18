@@ -37,13 +37,7 @@ export default ({}) => {
 	return (
 		<div
 			css={`
-				background: rgba(0, 0, 0, 0)
-					linear-gradient(
-						60deg,
-						${color ? color : 'var(--color)'} 0%,
-						${color ? lightenColor(color, -20) : 'var(--lightColor)'} 100%
-					)
-					repeat scroll 0% 0%;
+				background-color: var(--darkColor);
 				color: var(--textColor);
 				a {
 					color: inherit;

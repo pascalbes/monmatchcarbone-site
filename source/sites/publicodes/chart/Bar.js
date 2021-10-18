@@ -43,10 +43,8 @@ export default ({
 					margin-right: 0.8rem;
 					height: 1.1rem;
 					padding-left: 0.1rem;
-					border-radius: 0.4rem;
 					width: ${(nodeValue / empreinteMaximum) * 100 * 0.85}%;
 					color: white;
-					${shadowStyle}
 				`}
 			></span>
 			<Value {...{ nodeValue, completed, color: valueColor }} />

@@ -95,6 +95,7 @@ export default () => {
 						#b71540 90%,
 						white 110%
 					);
+					background-color: var(--color)
 					background-size: 400% 400%;
 					animation: gradient 15s ease infinite;
 					color: white;

@@ -35,35 +35,15 @@
 	/* ie11 */
 	color: rgb(41, 117, 209);
 	color: var(--color);
-	background-image: linear-gradient(
-		50deg,
-		rgba(39, 69, 195, 0.87) 5%,
-		rgb(41, 117, 209) 50%,
-		rgba(255, 255, 255, 0.52) 55%
-	);
-	background-image: linear-gradient(
-		50deg,
-		var(--color) 5%,
-		var(--lightColor) 50%,
-		rgba(255, 255, 255, 0.52) 55%
-	);
 	background-size: 280%;
 	background-position-x: 99%;
 }
 .ui__.button.plain {
-	background-image: linear-gradient(
-		50deg,
-		rgba(39, 69, 195, 0.87) 5%,
-		rgb(41, 117, 209) 50%,
-		rgba(41, 117, 209, 0.9) 55%
-	);
-	background-image: linear-gradient(
-		50deg,
-		var(--darkColor) -50%,
-		var(--color) 50%,
-		var(--lightColor) 55%
-	);
-
+	background-color: white;
+	color: var(--darkColor);
+}
+.ui__.button.plain:hover {
+	background-color: var(--darkColor);
 	color: white;
 }
 .ui__.button:not(:disabled):not(.disabled):not(.simple):hover,

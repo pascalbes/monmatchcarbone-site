@@ -57,14 +57,14 @@ const deriveAnalogousPalettes = (hex: string) => {
 
 const generateTheme = (themeColor?: string) => {
 	const // Use the default theme color if the host page hasn't made a choice
-		color = themeColor || '#5758BB',
-		lightColor = lightenColor(color, 10),
-		darkColor = lightenColor(color, -20),
-		lighterColor = lightenColor(color, 39),
-		lightestColor = lightenColor(color, 42),
+		color = '#0b095d',
+		lightColor = '#e7f2f9',
+		darkColor = '#0b095d',
+		lighterColor = '#e7f2f9',
+		lightestColor = '#e7f2f9',
 		darkestColor = lightenColor(color, -100),
 		grayColor = '#00000099',
-		textColor = findContrastedTextColor(color, true), // the 'simple' version feels better...
+		textColor = 'white', // the 'simple' version feels better...
 		inverseTextColor = textColor === '#ffffff' ? '#000' : '#fff',
 		lightenTextColor = (textColor: string) =>
 			textColor === '#ffffff' ? 'rgba(255, 255, 255, .7)' : 'rgba(0, 0, 0, .7)',

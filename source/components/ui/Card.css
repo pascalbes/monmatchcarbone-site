@@ -19,8 +19,10 @@
 .ui__.card.plain {
 	color: white;
 	color: var(--textColor);
-	background: linear-gradient(60deg, #215da6 0%, #297da1 100%);
-	background: linear-gradient(60deg, var(--darkColor) -100%, var(--color) 100%);
+	background-color: var(--darkColor);
+	/* linear-gradient(60deg, #215da6 0%, #297da1 100%); */
+	background: var(--darkColor);
+	/* linear-gradient(60deg, var(--darkColor) -100%, var(--color) 100%); */
 }
 .ui__.card.plain h1,
 .ui__.card.plain h2,
@@ -33,11 +35,12 @@
 }
 
 .ui__.card.light {
-	background: linear-gradient(
+	background: var(--color);
+	/* background: linear-gradient(
 		60deg,
 		var(--lighterColor) -100%,
 		var(--lightestColor) 100%
-	);
+	); */
 }
 
 .ui__.card.disabled img {
