@@ -9,11 +9,55 @@ export default () => (
 	</span>
 )
 
+export const MMCMonument = (props) => {
+	return (
+		<div css={`
+			display: flex;
+			flex-direction: column;
+			color: white;
+			@font-face {
+				font-family: "Monument";
+				src: url("MonumentExtended-Regular.otf");
+			}
+			@font-face {
+				font-family: "Monument Bold";
+				src: url("MonumentExtended-Ultrabold.otf");
+			}
+			p:first-child {
+				font-family: 'Monument';
+				font-size: 50px;
+			}
+			p:nth-child(2) {
+				font-family: 'Monument Bold';
+				font-size: 50px;
+			}
+			p:nth-child(3) {
+				font-family: 'Monument Bold';
+				font-size: 50px;
+			}
+		`}>
+			<p>MON</p>
+			<p>MATCH</p>
+			<p>CARBONE</p>
+		</div>
+	)
+}
+
 export const GELogo = (props) => {
 	const { width } = props;
 	const maxWidth = width ? width : "200px"
 	return (
 		<img src="Logo Game Earth.png" alt="logo Game Earth" css={`
+			max-width: ${maxWidth}
+		`}/>
+	)
+}
+
+export const MMCWhite = (props) => {
+	const { width } = props;
+	const maxWidth = width ? width : "200px"
+	return (
+		<img src="MMC_blanc.png" alt="logo Mon Match Carbone" css={`
 			max-width: ${maxWidth}
 		`}/>
 	)

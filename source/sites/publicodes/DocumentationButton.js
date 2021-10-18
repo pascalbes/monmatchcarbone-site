@@ -14,7 +14,6 @@ const DocumentationButton = (props) => {
 				}
 			`}
 		>
-			{emoji('📄')}
 			<Link {...props} to={'/documentation'}>
 				Documentation
 			</Link>

@@ -73,7 +73,7 @@ const Router = ({}) => {
 		<>
 			<div className="ui__ container">
 				<ConferenceBarLazy />
-				<nav css="display: flex; justify-content: center; margin: .2rem auto">
+				{location.pathname !== '/' && <nav css="display: flex; justify-content: center; margin: .2rem auto">
 					<Link
 						to="/"
 						css={`
@@ -88,7 +88,7 @@ const Router = ({}) => {
 					>
 						{location.pathname === '/' ? <Logo /> : <InlineLogo />}
 					</Link>
-				</nav>
+				</nav>}
 				<Switch>
 					<Route exact path="/" component={Landing} />
 					{/* Removes trailing slashes */}
