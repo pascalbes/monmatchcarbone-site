@@ -44,6 +44,26 @@ export const MMCMonument = (props) => {
 				font-family: 'Monument Bold';
 				font-size: 60px;
 			}
+			@media (max-width: 800px) {
+				p {
+					margin-bottom:-1px;
+				}
+				p:first-child {
+					font-size: 20px;
+					letter-spacing: 1px;
+				}
+				p:nth-child(2) {
+					font-size: 20px;
+					letter-spacing: 1px;
+				}
+				p:nth-child(3) {
+					font-size: 20px;
+					margin-bottom: 6px;
+				}
+				p:nth-child(4) {
+					font-size: 30px;
+				}
+			}
 		`}>
 			<p>CONNAISSEZ-VOUS</p>
 			<p>VOTRE EMPREINTE</p>

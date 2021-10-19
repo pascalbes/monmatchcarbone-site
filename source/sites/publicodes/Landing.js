@@ -65,6 +65,10 @@ export default () => {
 						a:visited {
 							color: white;
 						}
+						@media (max-width: 800px) {
+							font-size: 10px;
+							line-height: 14px;
+						}
 					`}
 				>
 					<p>Cette déclinaison, développée par <a href="https://www.gamearth.green/" target="_blank">Game Earth</a> avec <a href="https://www.bl-evolution.com/" target="_blank">BL Évolution</a>, s'appuie librement sur la version officielle de <a href="https://nosgestesclimat.fr/" target="_blank">Nos Gestes Climat</a> développé par <a href="https://www.associationbilancarbone.fr/" target="_blank">l'ABC</a> et <a href="https://datagir.ademe.fr/" target="_blank">Datagir (ADEME)</a>.</p>
@@ -95,6 +99,11 @@ export default () => {
 						:hover p {
 							color: var(--darkColor);
 						}
+						@media (max-width: 800px) {
+							p {
+								font-size: 20px;
+							}
+						}
 					`}>
 				<Link to="/simulateur/bilan">
 					<p>Commencez votre match</p>
@@ -118,9 +127,16 @@ export default () => {
 							font-size: 20px;
 							color: white;
 						}
-						
 						img {
 							max-width: 150px;
+						}
+						@media (max-width: 800px) {
+							> * {
+								font-size: 12px;
+							}
+							img {
+								max-width: 80px;
+							}
 						}
 					`}
 				>

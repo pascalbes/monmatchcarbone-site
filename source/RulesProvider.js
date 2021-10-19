@@ -18,7 +18,7 @@ const removeLoader = () => {
 	css.type = 'text/css'
 	css.innerHTML = `
 		#js {
-				animation: appear 0.5s;
+				animation: appear 1s;
 				opacity: 1;
 		}
 		#loading {
