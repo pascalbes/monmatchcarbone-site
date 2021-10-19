@@ -2,7 +2,7 @@ import Engine, { formatValue } from 'publicodes'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
 
-export const meanFormatter = (value) => Math.round(value / 100) / 10 + ' tonnes'
+export const meanFormatter = (value) => Math.round(value / 100) / 10 + ' TONNES'
 
 export default ({}) => {
 	const rules = useSelector((state) => state.rules)

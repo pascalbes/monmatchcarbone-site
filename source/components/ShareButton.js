@@ -16,8 +16,8 @@ export default (props) =>
 					.catch((error) => console.log('Error sharing', error))
 			}
 		>
-			<Icon />
 			{props.label && <span>{props.label}</span>}
+			<Icon />
 			{/* Created by Barracuda from the Noun Project */}
 		</button>
 	) : (

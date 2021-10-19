@@ -46,16 +46,18 @@ export default ({ details, noText, noAnimation, noCompletion, valueColor }) => {
 	return (
 		<section
 			css={`
+				background-color: var(--lightColor);
+				height: 100%;
 				h2 {
 					margin: 0.6rem 0 0.1rem;
 					font-size: 140%;
 				}
-				padding: 0;
 			`}
 		>
 			<div
 				css={`
 					position: relative;
+					height: 100%;
 				`}
 			>
 				<span
@@ -76,8 +78,10 @@ export default ({ details, noText, noAnimation, noCompletion, valueColor }) => {
 				></span>
 				<ul
 					css={`
+						height: 100%;
+						display: flex;
+						flex-direction: column;
 						margin-left: 2rem;
-
 						@media (min-width: 800px) {
 							max-width: 35rem;
 						}

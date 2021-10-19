@@ -69,11 +69,12 @@ export default function Root({}) {
 
 const Router = ({}) => {
 	const location = useLocation()
+	const isNav = !location.pathname.includes('/fin') && location.pathname !== '/';
 	return (
 		<>
 			<div className="ui__ container">
 				<ConferenceBarLazy />
-				{location.pathname !== '/' && <nav css="display: flex; justify-content: center; margin: .2rem auto">
+				{ isNav && <nav css="display: flex; justify-content: center; margin: .2rem auto">
 					<Link
 						to="/"
 						css={`

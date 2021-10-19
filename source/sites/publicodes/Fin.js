@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import React, { useContext } from 'react'
 import emoji from 'react-easy-emoji'
 import { useLocation } from 'react-router'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { animated, useSpring } from 'react-spring'
 import tinygradient from 'tinygradient'
 import { sessionBarMargin } from '../../components/SessionBar'
@@ -17,6 +17,14 @@ import IframeDataShareModal from './IframeDataShareModal'
 import BallonGES from './images/ballonGES.svg'
 import StartingBlock from './images/starting block.svg'
 import { GELogo } from './Logo'
+import { useDispatch, useSelector } from 'react-redux'
+import {
+	goToQuestion
+} from 'Actions/actions'
+import { last } from 'ramda'
+import {
+	answeredQuestionsSelector
+} from 'Selectors/simulationSelectors'
 
 const gradient = tinygradient([
 		'#78e08f',
@@ -81,6 +89,9 @@ export default ({}) => {
 }
 
 const AnimatedDiv = animated(({ score, value, details, headlessMode }) => {
+	const dispatch = useDispatch();
+	const answeredQuestions = useSelector(answeredQuestionsSelector);
+	const history = useHistory();
 	const backgroundColor = getBackgroundColor(value).toHexString(),
 		backgroundColor2 = getBackgroundColor(value + 2000).toHexString(),
 		textColor = findContrastedTextColor(backgroundColor, true),
@@ -104,8 +115,8 @@ const AnimatedDiv = animated(({ score, value, details, headlessMode }) => {
 	return (
 		<div
 			css={`
-				padding: 0 0.3rem 1rem;
 				max-width: 600px;
+				height: 100vh;
 				margin: 0 auto;
 				${sessionBarMargin}
 			`}
@@ -116,207 +127,207 @@ const AnimatedDiv = animated(({ score, value, details, headlessMode }) => {
 				image={shareImage}
 				url={window.location}
 			/>
-			<SessionBar noResults />
 			<motion.div
-				animate={{ scale: [0.9, 1] }}
-				transition={{ duration: headlessMode ? 0 : 0.6 }}
+				// animate={{ scale: [0.9, 1] }}
+				// transition={{ duration: headlessMode ? 0 : 0.6 }}
 				className=""
 				id="fin"
 				css={`
-					background: ${backgroundColor};
-					background: linear-gradient(
-						180deg,
-						${backgroundColor} 0%,
-						${backgroundColor2} 100%
-					);
-					color: ${textColor};
+					width: 100%;
+					height: 100%;
 					margin: 0 auto;
-					border-radius: 0.6rem;
 					display: flex;
 					flex-direction: column;
-					justify-content: space-evenly;
-
 					text-align: center;
-					font-size: 110%;
 				`}
 			>
-				<div id="shareImage" css="padding: 2rem 0 0">
-					<div css="display: flex; align-items: center; justify-content: center">
-						<img src={BallonGES} css="height: 10rem" />
-						<div
-							css={`
-								flex-direction: ${headlessMode ? 'column-reverse' : 'column'};
-								display: flex;
-								justify-content: space-evenly;
-								height: 10rem;
-							`}
-						>
-							<div css="font-weight: bold; font-size: 280%;">
-								<span css="width: 4rem; text-align: right; display: inline-block">
-									{integerValue}
-									{score < 10000 && (
-										<AnimatePresence>
-											{(score - value) / score < 0.01 && (
-												<motion.small
-													initial={{ opacity: 0, width: 0 }}
-													animate={{ opacity: 1, width: 'auto' }}
-													css={`
-														color: inherit;
-														font-size: 60%;
-													`}
-												>
-													,{decimalValue}
-												</motion.small>
-											)}
-										</AnimatePresence>
-									)}
-								</span>{' '}
-								tonnes
-							</div>
-							<div
-								css={`
-									background: #ffffff3d;
-									border-radius: 0.6rem;
-									padding: 0.4rem 1rem;
+				<FinalFootPrint 
+					integerValue={integerValue}
+					decimalValue={decimalValue}
+					backgroundColor={backgroundColor}
+					headlessMode={headlessMode}
+				/>
+				{!integratorActionText && <ActionButton text="PASSER À L'ACTION" />}
+				<div css={`
+					height: 35%;
+					width: 100%;
+					ul {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+					}
+				`}>
+					<Chart
+						details={details}
+						color={textColor}
+						noAnimation
+						noText
+						noCompletion
+						valueColor={textColor}
+					/>
+				</div>
 
-									> div {
-										display: flex;
-										justify-content: space-between;
-										flex-wrap: wrap;
-									}
-									strong {
-										font-weight: bold;
-									}
-									> img {
-										margin: 0 0.6rem !important;
-									}
-								`}
-							>
-								<div>
-									<span>
-										{emoji('🇫🇷 ')}
-										moyenne{' '}
-									</span>{' '}
-									<strong>
-										{' '}
-										<DefaultFootprint />{' '}
-									</strong>
-								</div>
-								<div>
-									<span>
-										{emoji('🎯 ')}
-										objectif{' '}
-									</span>
-									<strong>2 tonnes</strong>
-								</div>
-								{!headlessMode && (
-									<div css="margin-top: .2rem;justify-content: flex-end !important">
-										<a
-											css="color: inherit"
-											href="https://datagir.ademe.fr/blog/budget-empreinte-carbone-c-est-quoi/"
-											target="_blank"
-										>
-											Comment ça ?
-										</a>
-									</div>
-								)}
-							</div>
-						</div>
-					</div>
-					{!integratorActionText && <ActionButton text="Passer à l'action" />}
-					<div css="padding: 1rem">
-						<Chart
-							details={details}
+				<div css={`
+					height: calc(15% - 2px);
+					margin-top: 2px;
+					display: grid;
+					grid-template-columns: calc(40% - 1px) calc(60% - 1px);
+					column-gap: 2px;
+					button {
+						background-color:black;
+						color:white;
+						font-size: 20px;
+						width: 100%;
+						height: 100%;
+						font-weight: 500;
+					}
+					div > button {
+						display: flex;
+						justify-content: center;
+					}
+					button:hover {
+						font-weight: bold;
+					}
+					@media (max-width: 800px) {
+						button {
+							font-size: 16px;
+						}
+					}
+				`}>
+					<button onClick={() => {
+							dispatch(goToQuestion(last(answeredQuestions)))
+							history.push('/simulateur/bilan')
+						}}>Ma simulation
+					</button>
+					<div css="display: flex; align-items: center;">
+						<ShareButton
+							text="Voilà mon empreinte climat. Mesure la tienne !"
+							url={window.location}
+							title={'Nos Gestes Climat'}
 							color={textColor}
-							noAnimation
-							noText
-							noCompletion
-							valueColor={textColor}
+							label="Partager mes résultats"
 						/>
 					</div>
 				</div>
-				<div css="display: flex; flex-direction: column; margin: 1rem 0">
-					<ShareButton
-						text="Voilà mon empreinte climat. Mesure la tienne !"
-						url={window.location}
-						title={'Nos Gestes Climat'}
-						color={textColor}
-						label="Partager mes résultats"
-					/>
-				</div>
+
+				
 
 				{integratorActionText && integratorActionUrl && (
 					<IntegratorActionButton />
 				)}
-
-				{integratorYoutubeVideo && (
-					<div
-						class="videoWrapper"
-						css={`
-							iframe {
-								width: 100%;
-							}
-						`}
-					>
-						<iframe
-							width="560"
-							height="315"
-							src={integratorYoutubeVideo}
-							title="YouTube video player"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						></iframe>
-					</div>
-				)}
-
 				{integratorActionText && <ActionButton text="Réduire mon empreinte" />}
 			</motion.div>
-			<div css={`
-				width: 100%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				margin: 30px 0 10px;
-				`}>
-				<GELogo width="150px"/>
-			</div>
 		</div>
 	)
 })
 
-const ActionButton = ({ text }) => (
-	<Link
-		to="/actions"
-		className="ui__ button plain"
-		css={`
-			margin: 0.6rem auto;
-			width: 90%;
-
-			img {
-				transform: scaleX(-1);
-				height: 2rem;
-				margin: 0 0.6rem;
-				display: inline-block;
-			}
-			a {
-				color: var(--textColor);
-				text-decoration: none;
-			}
-		`}
-	>
+const FinalFootPrint = (props) => {
+	const {integerValue, decimalValue, backgroundColor, headlessMode } = props;
+	return (
 		<div
 			css={`
+				background-color: ${backgroundColor};
+				flex-direction: ${headlessMode ? 'column-reverse' : 'column'};
 				display: flex;
+				align-items:center;
 				justify-content: center;
-				align-items: center;
-				width: 100%;
+				height: 35%;
 			`}
 		>
-			<img src={StartingBlock} />
-			{text}
+			<div css={`
+				margin-bottom: 10px;
+				p {
+					font-size: 70px;
+					font-weight: bold;
+					font-family: 'Montserrat';
+					color: white;
+				}
+				span {
+					font-size: 75%;
+				}
+				@media (max-width: 800px) {
+					p {
+						font-size: 50px;
+					}
+				}
+			`}>
+				<p>{integerValue},<span>{decimalValue} {' '}TONNES</span></p>
+			</div>
+			<div
+				css={`
+					p {
+						font-size: 20px;
+						font-weight: 600;
+						font-family: 'Montserrat';
+						margin-bottom: 0;
+						color: white;
+					}
+					span {
+						font-size: 20px;
+						font-family: 'Montserrat';
+						font-weight: 300;
+						color: white;
+					}
+				`}
+			>
+				<p>Moyenne <span>{' '}<DefaultFootprint /></span></p>
+				<p>Objectif <span>{' '}2 TONNES</span></p>
+			</div>
+			<div>
+				{!headlessMode && (
+					<div css="margin-top: .2rem;justify-content: flex-end !important;">
+						<a
+							css="color: black; font-size:14px;"
+							href="https://datagir.ademe.fr/blog/budget-empreinte-carbone-c-est-quoi/"
+							target="_blank"
+						>
+							COMMENT ÇA ?
+						</a>
+					</div>
+				)}
+			</div>
 		</div>
+	)
+}
+
+
+const ActionButton = ({ text }) => (
+	<div css={`
+	width: 100%;
+	height: 15%;
+	background-color: var(--darkColor);
+	a {
+		text-decoration: none;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	p {
+		color: white;
+		margin: 0;
+		font-size: 26px;
+	}
+	:hover {
+		background-color: #62AF9B;
+	}
+	:hover p {
+		color: white;
+		font-weight: bold;
+	}
+	@media (max-width: 800px) {
+		p {
+			font-size: 20px;
+		}
+	}
+	`}
+		>
+	<Link to="/actions">
+		<p>{text} ></p>
 	</Link>
+	</div>
 )
 
 const IntegratorActionButton = () => {

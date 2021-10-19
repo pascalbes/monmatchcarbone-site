@@ -91,7 +91,7 @@ export default () => {
 						p {
 							color: #62AF9B;
 							margin: 0;
-							font-size: 36px;
+							font-size: 40px;
 						}
 						:hover {
 							background-color: #62AF9B;
@@ -106,8 +106,7 @@ export default () => {
 						}
 					`}>
 				<Link to="/simulateur/bilan">
-					<p>Commencez votre match</p>
-					<p>></p>
+					<p>Commencez votre match ></p>
 				</Link>
 			</div>
 			
