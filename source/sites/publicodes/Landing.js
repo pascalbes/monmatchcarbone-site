@@ -56,7 +56,7 @@ export default () => {
 				<div
 					css={`
 						font-size: 14px;
-						line-height: 18px;
+						line-height: 20px;
 						width: 80%;
 						display: flex;
 						align-items: center;
@@ -118,6 +118,8 @@ export default () => {
 					`}>			
 				<div
 					css={`
+						width: 100%;
+						height: 100%;
 						display: flex;
 						justify-content: space-between;
 						align-items:center;
@@ -128,7 +130,7 @@ export default () => {
 							color: white;
 						}
 						img {
-							max-width: 150px;
+							max-width: 130px;
 						}
 						@media (max-width: 800px) {
 							> * {
