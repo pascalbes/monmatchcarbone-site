@@ -18,7 +18,6 @@ export default () => {
 				}
 				h1 {
 					font-family: 'Monument';
-					margin-top: 0.3rem;
 					font-size: 140%;
 					line-height: 1.2em;
 				}
@@ -41,61 +40,73 @@ export default () => {
 		>
 			<div css={`
 				width: 100%;
-				padding-top: 50px;
+				padding: 10px;
 				height: 60%;
 				display: flex;
 				flex-direction: column;
 				align-items:center;
-				background-image: url("fond_stade.jpg");
-				> div:first-child {
-					display: flex;
-					align-items:center;
-					justify-content: center;
-					margin-bottom: 20px
-				}
+				justify-content: space-between;
+				background-image: url("fond_stade.png");
 				h1 {
 					color: white;
 				}
 			`}>
-			 	<div>
-					<MMCWhite width="200px" />
-					<GELogo width="150px"/>
-			 	</div>
-				 <MMCMonument />
-				 <div css="margin: 1rem 0 .6rem;">
-					<Link to="/simulateur/bilan" className="ui__ plain button">
-						Commencez votre match
-					</Link>
-				</div>
-			</div>
-			
-			<div css="margin-bottom: 1rem">
-				
-				{/* <div css="margin: .6rem 0 1rem;">
-					<Link to="/conférence" className="ui__ button small">
-						{emoji('👥')} Faire le test à plusieurs
-					</Link>
-				</div> */}
-				<NewsBanner />
-			</div>
-
-			<footer>
+				<MMCWhite width="200px" />
+				<MMCMonument />
 				<div
 					css={`
-						margin-left: 5%;
-						width: 90%;
+						font-size: 14px;
+						line-height: 18px;
+						width: 80%;
 						display: flex;
 						align-items: center;
 						justify-content: center;
-						margin-bottom: 1rem;
-						img {
-							margin: 0 0.6rem;
+						color:white;
+						a:visited {
+							color: white;
 						}
 					`}
 				>
 					<p>Cette déclinaison, développée par <a href="https://www.gamearth.green/" target="_blank">Game Earth</a> avec <a href="https://www.bl-evolution.com/" target="_blank">BL Évolution</a>, s'appuie librement sur la version officielle de <a href="https://nosgestesclimat.fr/" target="_blank">Nos Gestes Climat</a> développé par <a href="https://www.associationbilancarbone.fr/" target="_blank">l'ABC</a> et <a href="https://datagir.ademe.fr/" target="_blank">Datagir (ADEME)</a>.</p>
 				</div>
-				
+			</div>
+
+			<div css={`
+						width: 100%;
+						height: 20%;
+						background-color: var(--darkColor);
+						a {
+							text-decoration: none;
+							width: 100%;
+							height: 100%;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							align-items: center;
+						}
+						p {
+							color: #62AF9B;
+							margin: 0;
+							font-size: 36px;
+						}
+						:hover {
+							background-color: #62AF9B;
+						}
+						:hover p {
+							color: var(--darkColor);
+						}
+					`}>
+				<Link to="/simulateur/bilan">
+					<p>Commencez votre match</p>
+					<p>></p>
+				</Link>
+			</div>
+			
+
+			<footer css={`
+						width: 100%;
+						height: 20%;
+					`}>			
 				<div
 					css={`
 						display: flex;
@@ -104,9 +115,10 @@ export default () => {
 						padding: 15px 20px;
 						background-color: black;
 						> * {
-							font-size: 24px;
+							font-size: 20px;
 							color: white;
 						}
+						
 						img {
 							max-width: 150px;
 						}
@@ -117,6 +129,9 @@ export default () => {
 						display: flex;
 						flex-direction: column;
 						align-items: flex-end;
+						a, a:visited {
+							color: white;
+						}
 					`}>
 						<Link to="/à-propos">À propos</Link>
 						<DocumentationButton />

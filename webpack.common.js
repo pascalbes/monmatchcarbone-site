@@ -45,6 +45,7 @@ module.exports.default = {
 			'./source/images/MMC_inline.png',
 			'./source/images/Logo Game Earth.png',
 			'./source/images/fond_stade.jpg',
+			'./source/images/fond_stade.png',
 			'./source/images/MMC_blanc.png',
 			'./source/images/republique-francaise-logo.png',
 			'./source/font/MonumentExtended-Regular.otf',

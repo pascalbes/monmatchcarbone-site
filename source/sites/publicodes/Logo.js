@@ -23,22 +23,32 @@ export const MMCMonument = (props) => {
 				font-family: "Monument Bold";
 				src: url("MonumentExtended-Ultrabold.otf");
 			}
+			p {
+				margin-bottom: 8px;
+			}
 			p:first-child {
 				font-family: 'Monument';
-				font-size: 50px;
+				font-size: 40px;
+				letter-spacing: 1px;
 			}
 			p:nth-child(2) {
 				font-family: 'Monument Bold';
-				font-size: 50px;
+				font-size: 40px;
 			}
 			p:nth-child(3) {
 				font-family: 'Monument Bold';
-				font-size: 50px;
+				font-size: 40px;
+				margin-bottom: 12px;
+			}
+			p:nth-child(4) {
+				font-family: 'Monument Bold';
+				font-size: 60px;
 			}
 		`}>
-			<p>MON</p>
-			<p>MATCH</p>
-			<p>CARBONE</p>
+			<p>CONNAISSEZ-VOUS</p>
+			<p>VOTRE EMPREINTE</p>
+			<p>SUR LE</p>
+			<p>CLIMAT ?</p>
 		</div>
 	)
 }
@@ -58,7 +68,8 @@ export const MMCWhite = (props) => {
 	const maxWidth = width ? width : "200px"
 	return (
 		<img src="MMC_blanc.png" alt="logo Mon Match Carbone" css={`
-			max-width: ${maxWidth}
+			max-width: ${maxWidth};
+			margin: -20px 0;
 		`}/>
 	)
 }
