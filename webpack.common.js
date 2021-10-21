@@ -167,7 +167,7 @@ module.exports.HTMLPlugins = ({ injectTrackingScript = false } = {}) => [
 		template: 'index.html',
 		logo: 'https://nosgestesclimat.fr/dessin-nosgestesclimat.png',
 		chunks: ['publicodes'],
-		title: 'Nos Gestes Climat',
+		title: 'Mon Match Carbone',
 		description: 'Connaissez-vous votre empreinte sur le climat ?',
 		filename: 'index.html',
 		injectTrackingScript,
