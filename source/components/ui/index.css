@@ -122,7 +122,7 @@ section {
 }
 @media (max-width: 850px) {
 	.ui__.container .ui__.full-width {
-		margin: 0 -0.6rem;
+		margin: 0 0;
 	}
 }
 

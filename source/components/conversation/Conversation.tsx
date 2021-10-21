@@ -211,6 +211,7 @@ export default function Conversation({
 							css={`
 								@media (max-width: 800px) {
 									margin: 0.4rem 0;
+									padding: 0px 10px;
 								}
 							`}
 						>
