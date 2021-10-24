@@ -226,54 +226,98 @@ const FinalFootPrint = (props) => {
 	return (
 		<div
 			css={`
+				padding: 50px 0;
 				background-color: ${backgroundColor};
 				flex-direction: ${headlessMode ? 'column-reverse' : 'column'};
 				display: flex;
 				align-items:center;
-				justify-content: center;
+				justify-content: space-between;
 				height: 35%;
+				@media (max-width: 800px) {
+					padding: 40px 0;
+					}
 			`}
 		>
 			<div css={`
-				margin-bottom: 10px;
-				p {
+				p:first-child {
 					font-size: 70px;
 					font-weight: bold;
 					font-family: 'Montserrat';
 					color: white;
+					margin-bottom: 8px;
+				}
+				p:last-child {
+					font-size: 28px;
+					font-weight: 300;
+					font-family: 'Montserrat';
+					color: white;
+					margin-bottom: 0;
 				}
 				span {
 					font-size: 75%;
 				}
 				@media (max-width: 800px) {
-					p {
-						font-size: 50px;
+					p:first-child {
+						font-size: 40px;
+						font-weight: bold;
+						font-family: 'Montserrat';
+						color: white;
+						margin-bottom: 4px;
+					}
+					p:last-child {
+						font-size: 20px;
+						font-weight: 300;
+						font-family: 'Montserrat';
+						color: white;
 					}
 				}
 			`}>
 				<p>{integerValue},<span>{decimalValue} {' '}TONNES</span></p>
+				<p>empreinte sportive</p>
 			</div>
 			<div
 				css={`
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
 					p {
-						font-size: 20px;
-						font-weight: 600;
-						font-family: 'Montserrat';
-						margin-bottom: 0;
-						color: white;
-					}
-					span {
-						font-size: 20px;
+						font-size: 16px;
+						line-height: 19px;
 						font-family: 'Montserrat';
 						font-weight: 300;
 						color: white;
+						width: 80%;
+						margin-bottom: 0;
 					}
+					span {
+						font-weight: bold;
+					}
+					@media (max-width: 800px) {
+						p {
+							width: 90%;
+							font-size: 12px;
+							line-height: 15px;
+						}
+				}
 				`}
 			>
-				<p>Moyenne <span>{' '}<DefaultFootprint /></span></p>
-				<p>Objectif <span>{' '}2 TONNES</span></p>
+				<p>Afin de respecter les accords de Paris, chaque français devrait avoir une empreinte globale de <span>2 tonnes</span>. </p>
 			</div>
 			<div>
+				{!headlessMode && (
+					<div css="justify-content: flex-end !important;margin-bottom: 0;">
+						<a
+							css="color: black; font-size:14px;"
+							href="https://nosgestesclimat.fr/"
+							target="_blank"
+						>
+							CALCULER MON EMPREINTE GLOBALE
+						</a>
+					</div>
+				)}
+			</div>
+			{/* <div>
 				{!headlessMode && (
 					<div css="margin-top: .2rem;justify-content: flex-end !important;">
 						<a
@@ -285,7 +329,7 @@ const FinalFootPrint = (props) => {
 						</a>
 					</div>
 				)}
-			</div>
+			</div> */}
 		</div>
 	)
 }
