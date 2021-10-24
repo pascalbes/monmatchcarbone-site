@@ -168,7 +168,7 @@ module.exports.HTMLPlugins = ({ injectTrackingScript = false } = {}) => [
 		logo: 'https://nosgestesclimat.fr/dessin-nosgestesclimat.png',
 		chunks: ['publicodes'],
 		title: 'Mon Match Carbone',
-		description: 'Connaissez-vous votre empreinte sur le climat ?',
+		description: 'Calculez votre empreinte carbone sportive',
 		filename: 'index.html',
 		injectTrackingScript,
 		base: '/',
