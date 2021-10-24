@@ -38,11 +38,11 @@ export const MMCMonument = (props) => {
 			p:nth-child(3) {
 				font-family: 'Monument Bold';
 				font-size: 40px;
-				margin-bottom: 12px;
+				margin-bottom: 16px;
 			}
 			p:nth-child(4) {
 				font-family: 'Monument Bold';
-				font-size: 60px;
+				font-size: 70px;
 			}
 			@media (max-width: 800px) {
 				p {
@@ -65,10 +65,10 @@ export const MMCMonument = (props) => {
 				}
 			}
 		`}>
-			<p>CONNAISSEZ-VOUS</p>
+			<p>CALCULEZ</p>
 			<p>VOTRE EMPREINTE</p>
-			<p>SUR LE</p>
-			<p>CLIMAT ?</p>
+			<p>CARBONE</p>
+			<p>SPORTIVE</p>
 		</div>
 	)
 }
