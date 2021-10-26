@@ -18,9 +18,7 @@ export default () => (
 			l'unique but de l'améliorer.{' '}
 		</p>
 		<p>
-			En particulier, nous suivons l'adresse de la page de fin de simulation,
-			qui contient le total de votre empreinte et sa répartition en grande
-			catégories (transport, logement, ...).
+		En particulier, nous suivons l'adresse de la page de fin de simulation, qui contient le total de votre empreinte et sa répartition en grande catégorie.
 		</p>
 		<p>Vous pouvez en savoir plus et désactiver ce suivi ci-dessous.</p>
 

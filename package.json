@@ -1,11 +1,11 @@
 {
-	"name": "nosgestesclimat-site",
+	"name": "monmatchcarbone-site",
 	"license": "MIT",
 	"version": "1.2.0",
 	"description": "The leading open source climate footprint calculator",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/datagir/nosgestesclimat-site.git"
+		"url": "https://github.com/pascalbes/monmatchcarbone-site"
 	},
 	"engines": {
 		"node": ">=15"

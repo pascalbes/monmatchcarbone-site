@@ -2,7 +2,6 @@ import { toPairs } from 'ramda'
 import React, { useState } from 'react'
 import emoji from 'react-easy-emoji'
 import { Markdown } from 'Components/utils/markdown'
-import FAQ from 'raw-loader!./FAQ.md'
 import { useLocation } from 'react-router-dom'
 
 let formStyle = `
@@ -62,16 +61,12 @@ export default ({}) => {
 	return (
 		<div className="ui__ container" css="padding-bottom: 1rem">
 			<h1>Contribuer</h1>
-			<h2 css="font-size: 180%">{emoji('❔')}Questions fréquentes</h2>
-			<div className="ui__ card" css="padding-bottom: 1rem">
-				<Markdown escapeHtml={false} source={FAQ} />
-			</div>
 			<h2 css="font-size: 180%">{emoji('🙋‍♀️')}J'ai une autre question</h2>
 			<p>
 				{emoji('➡ ')}Vous connaissez Github ? Dans ce cas, venez contribuer
 				directement sur le projet{' '}
 				<a
-					href="https://github.com/betagouv/ecolab-data/blob/master/CONTRIBUTING.md"
+					href="https://github.com/pascalbes/monmatchcarbone/blob/master/CONTRIBUTING.md"
 					target="_blank"
 				>
 					en suivant ce guide

@@ -2,19 +2,19 @@
 
 ## Qu'est-ce que c'est ?
 
-Ce simulateur vous permet d'évaluer votre empreinte carbone individuelle annuelle totale et par grandes catégories (alimentation, transport, logement, divers, services publics, numérique), de la situer par rapport aux objectifs climatiques et surtout de passer à l’action à votre niveau avec des gestes personnalisés en fonction de vos réponses.
+Ce simulateur vous permet d'évaluer l’empreinte carbone de vos activités sportives par grande catégorie (équipements,
+transport, alimentation, pratique de compétitions et en tant que spectateur).
 
-Basé sur une [analyse des calculateurs existants début 2020](https://www.associationbilancarbone.fr/wp-content/uploads/2020/12/analyse-des-calculateurs-dempreinte-carbone-individuelle-a-lorigine-de-nos-gestes-climat-vf-.pdf), il s'appuie sur le modèle MicMac des associations [Avenir Climatique](https://avenirclimatique.org/les-outils/) et [TaCa](https://www.taca.asso.fr/).
+Il est basé sur le modèle de nos gestes climat, un simulateur permettant de calculer son empreinte carbone individuelle
+développé par l’équipe [Datagir](https://datagir.ademe.fr/) de l’Agence de la transition écologique ([ADEME](https://www.ademe.fr/)) et [beta.gouv.fr](https://beta.gouv.fr/), en partenariat avec l’[Association Bilan Carbone](https://www.associationbilancarbone.fr/) (ABC).
 
 ## Qui le développe ?
 
-Ce calculateur carbone est développé par l'équipe [Datagir](https://datagir.ademe.fr/) de l’[Agence de la transition écologique](https://www.ademe.fr/) (ADEME) et [beta.gouv.fr](https://beta.gouv.fr/), en partenariat avec l’[Association Bilan Carbone](https://www.associationbilancarbone.fr/) (ABC).
+Ce calculateur carbone est développé par [Game Earth](https://www.gamearth.green/). Les calculs supplémentaires par rapport à Nos Gestes Climat ont été réalisés par [BL évolution](https://www.bl-evolution.com/).
 
 ## Nouveautés
 
 Le simulateur est amélioré en continu.
-
-[✨️ Découvrez les dernières nouveautés et les notes de versions](/nouveautés).
 
 ## Vie privée
 
@@ -28,23 +28,18 @@ On vous dit tout sur notre page [diffuser](/diffuser).
 
 ## Nous contacter
 
-contact@nosgestesclimat.fr
+hello@gamearth.green
 
 ## Mentions légales
 
-Siège social de l'ADEME :
-
-20, avenue du Grésillé
-
-BP 90406
-
-49004 Angers Cedex 01
-
-Tél. : 02 41 20 41 20
+Siège social de GAME EARTH FUND :
+Le Maine
+24310
+Biras
 
 ### Directeur de publication
 
-Martin Régner - ADEME
+Benjamin Adler – GAME EARTH FUND
 
 ### Prestataire d'hébergement
 
