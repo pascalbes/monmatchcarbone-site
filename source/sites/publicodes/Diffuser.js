@@ -16,5 +16,6 @@ Ce simulateur vous permet d'évaluer votre empreinte carbone individuelle annuel
 		<p>
 			<Markdown source={about} />
 		</p>
+		<script id="nosgestesclimat" src="https://monmatchcarbone.fr/iframe.js"></script>
 	</section>
 )

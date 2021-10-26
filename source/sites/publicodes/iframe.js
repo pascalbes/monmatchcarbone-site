@@ -9,7 +9,7 @@ const shareData = script.dataset['partagedatafinsimulation'] != undefined,
 	couleur = script.dataset.couleur
 
 const srcURL = new URL(script.src)
-const hostname = srcURL.hostname || 'nosgestesclimat.fr'
+const hostname = srcURL.hostname || 'monmatchcarbone.fr'
 
 const integratorLogo = script.dataset.integratorLogo,
 	integratorName = script.dataset.integratorName,
