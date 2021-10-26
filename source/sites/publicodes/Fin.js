@@ -100,6 +100,7 @@ const AnimatedDiv = animated(({ score, value, details, headlessMode }) => {
 			minimumSignificantDigits: 2,
 		}),
 		integerValue = roundedValue.split(',')[0],
+		unit = integerValue > 1 ? "tonnes" : "tonne",
 		decimalValue = roundedValue.split(',')[1],
 		shareImage =
 			'https://aejkrqosjq.cloudimg.io/v7/' +
@@ -123,7 +124,7 @@ const AnimatedDiv = animated(({ score, value, details, headlessMode }) => {
 		>
 			<Meta
 				title="Mon Match Carbone"
-				description={`Mon empreinte climat est de ${roundedValue} tonnes de CO2e. Mesure la tienne !`}
+				description={`Mon empreinte climat est de ${roundedValue} ${unit} de CO2e. Mesure la tienne !`}
 				image={shareImage}
 				url={window.location}
 			/>
@@ -142,7 +143,9 @@ const AnimatedDiv = animated(({ score, value, details, headlessMode }) => {
 				`}
 			>
 				<FinalFootPrint 
+					roundedValue={roundedValue}
 					integerValue={integerValue}
+					unit={unit}
 					decimalValue={decimalValue}
 					backgroundColor={backgroundColor}
 					headlessMode={headlessMode}
@@ -168,7 +171,7 @@ const AnimatedDiv = animated(({ score, value, details, headlessMode }) => {
 				</div>
 
 				<div css={`
-					height: calc(15% - 2px);
+					height: calc(10% - 2px);
 					margin-top: 2px;
 					display: grid;
 					grid-template-columns: calc(40% - 1px) calc(60% - 1px);
@@ -222,17 +225,19 @@ const AnimatedDiv = animated(({ score, value, details, headlessMode }) => {
 })
 
 const FinalFootPrint = (props) => {
-	const {integerValue, decimalValue, backgroundColor, headlessMode } = props;
+	const {integerValue, decimalValue, backgroundColor, headlessMode, roundedValue, unit } = props;
+	const upperUnit = unit.toUpperCase();
+	const carbonFootPrintPercentage = Math.round(parseFloat(roundedValue.replace(',','.'))/2*100);
 	return (
 		<div
 			css={`
-				padding: 50px 0;
+				padding: 40px 0;
 				background-color: ${backgroundColor};
 				flex-direction: ${headlessMode ? 'column-reverse' : 'column'};
 				display: flex;
 				align-items:center;
 				justify-content: space-between;
-				height: 35%;
+				height: 40%;
 				@media (max-width: 800px) {
 					padding: 40px 0;
 					}
@@ -272,7 +277,7 @@ const FinalFootPrint = (props) => {
 					}
 				}
 			`}>
-				<p>{integerValue},<span>{decimalValue} {' '}TONNES</span></p>
+				<p>{integerValue},<span>{decimalValue} {' '}{upperUnit}</span></p>
 				<p>empreinte sportive</p>
 			</div>
 			<div
@@ -287,8 +292,11 @@ const FinalFootPrint = (props) => {
 						font-family: 'Montserrat';
 						font-weight: 300;
 						color: white;
-						width: 80%;
+						width: 90%;
 						margin-bottom: 0;
+					}
+					p:first-child {
+						margin-bottom: 6px;
 					}
 					span {
 						font-weight: bold;
@@ -303,6 +311,7 @@ const FinalFootPrint = (props) => {
 				`}
 			>
 				<p>Afin de respecter les accords de Paris, chaque français devrait avoir une empreinte globale de <span>2 tonnes</span>. </p>
+				<p>Vos pratiques sportives représentent environ <span>{carbonFootPrintPercentage}%</span> de cette valeur</p>
 			</div>
 			<div>
 				{!headlessMode && (
