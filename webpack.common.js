@@ -48,6 +48,8 @@ module.exports.default = {
 			'./source/images/republique-francaise-logo.png',
 			'./source/font/MonumentExtended-Regular.otf',
 			'./source/font/MonumentExtended-Ultrabold.otf',
+			'./source/font/dessin_mmc1.png',
+			'./source/font/dessin_mmc2.png',
 			{
 				from: './source/data',
 				to: 'data',
@@ -163,10 +165,10 @@ module.exports.commonLoaders = (mode = 'production') => {
 module.exports.HTMLPlugins = ({ injectTrackingScript = false } = {}) => [
 	new HTMLPlugin({
 		template: 'index.html',
-		logo: 'https://nosgestesclimat.fr/dessin-nosgestesclimat.png',
+		logo: 'https://monmatchcarbone.fr/dessin_mmc1.png',
 		chunks: ['publicodes'],
 		title: 'Mon Match Carbone',
-		description: 'Calculez votre empreinte carbone sportive',
+		description: 'Mon Match Carbone, le 1er simulateur d\'empreinte carbone dédié à la pratique sportive individuelle',
 		filename: 'index.html',
 		injectTrackingScript,
 		base: '/',
