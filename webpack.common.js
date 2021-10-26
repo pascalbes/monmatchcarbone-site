@@ -48,8 +48,9 @@ module.exports.default = {
 			'./source/images/republique-francaise-logo.png',
 			'./source/font/MonumentExtended-Regular.otf',
 			'./source/font/MonumentExtended-Ultrabold.otf',
-			'./source/font/dessin_mmc1.png',
-			'./source/font/dessin_mmc2.png',
+			'./source/images/dessin_mmc1.png',
+			'./source/images/dessin_mmc2.png',
+			'./source/images/mmc_favicon.png',
 			{
 				from: './source/data',
 				to: 'data',
@@ -165,7 +166,7 @@ module.exports.commonLoaders = (mode = 'production') => {
 module.exports.HTMLPlugins = ({ injectTrackingScript = false } = {}) => [
 	new HTMLPlugin({
 		template: 'index.html',
-		logo: 'https://monmatchcarbone.fr/dessin_mmc1.png',
+		logo: 'https://monmatchcarbone.fr/mmc_favicon.png',
 		chunks: ['publicodes'],
 		title: 'Mon Match Carbone',
 		description: 'Mon Match Carbone, le 1er simulateur d\'empreinte carbone dédié à la pratique sportive individuelle',
