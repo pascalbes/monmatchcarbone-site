@@ -129,7 +129,7 @@ export default () => {
 						width: 100%;
 						height: 100%;
 						display: flex;
-						justify-content: space-between;
+						justify-content: flex-end;
 						align-items:center;
 						padding: 15px 20px;
 						background-color: black;
@@ -150,7 +150,7 @@ export default () => {
 						}
 					`}
 				>
-					<img src="republique-francaise-logo.png" alt="logo RP" />
+					{/* <img src="republique-francaise-logo.png" alt="logo RP" /> */}
 					<div css={`
 						display: flex;
 						flex-direction: column;
