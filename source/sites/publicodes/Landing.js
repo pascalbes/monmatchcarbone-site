@@ -129,7 +129,7 @@ export default () => {
 						width: 100%;
 						height: 100%;
 						display: flex;
-						justify-content: flex-end;
+						justify-content: space-between;
 						align-items:center;
 						padding: 15px 20px;
 						background-color: black;
@@ -139,6 +139,7 @@ export default () => {
 						}
 						img {
 							max-width: 130px;
+							max-height: 100%;
 						}
 						@media (max-width: 800px) {
 							> * {
@@ -150,7 +151,7 @@ export default () => {
 						}
 					`}
 				>
-					{/* <img src="republique-francaise-logo.png" alt="logo RP" /> */}
+					<img src="Logo_GE.png" alt="logo GE" />
 					<div css={`
 						display: flex;
 						flex-direction: column;

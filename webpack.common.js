@@ -51,6 +51,7 @@ module.exports.default = {
 			'./source/images/dessin_mmc1.png',
 			'./source/images/dessin_mmc2.png',
 			'./source/images/mmc_favicon.png',
+			'./source/images/Logo_GE.png',
 			{
 				from: './source/data',
 				to: 'data',
