@@ -62,7 +62,7 @@ export default () => {
 				<h2>Comment créer un persona ?</h2>
 				<p>
 					C'est dans le fichier{' '}
-					<a href="https://github.com/datagir/nosgestesclimat-site/blob/master/source/sites/publicodes/personas.yaml">
+					<a href="https://github.com/pascalbes/monmatchcarbone-site/blob/master/source/sites/publicodes/personas.yaml">
 						personas.yaml
 					</a>{' '}
 					que ça se passe. On peut soit copier coller les données d'un autre

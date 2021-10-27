@@ -2,9 +2,9 @@
 
 Merci de prendre le temps de contribuer ! 🎉
 
-> Attention : ce document vous explique comment contribuer au code de l'interface de Nos Gestes Climat. Pour le modèle, les calculs de gaz à effet de serre, les textes des questions, les gestes climat, etc c'est par [ici](https://github.com/datagir/nosgestesclimat/blob/master/CONTRIBUTING.md).
+> Attention : ce document vous explique comment contribuer au code de l'interface de Mon Match Carbone. Pour le modèle, les calculs de gaz à effet de serre, les textes des questions, les gestes climat, etc c'est par [ici](https://github.com/pascalbes/monmatchcarbone/blob/master/CONTRIBUTING.md).
 
-> Si vous créez une PR (Pull Request, proposition de changements) de modification du modèle datagir/nosgestesclimat, ajoutez simplement `?branch=votre-nouvelle-branche` à l'adresse pour tester le site avec vos modifications des modèles.
+> Si vous créez une PR (Pull Request, proposition de changements) de modification du modèle pascalbes/monmatchcarbone, ajoutez simplement `?branch=votre-nouvelle-branche` à l'adresse pour tester le site avec vos modifications des modèles.
 
 Pour contribuer au code du site, RDV dans la section _issues_ pour voir les discussions et avancement actuels.
 
@@ -31,7 +31,7 @@ Si l'historique des commits est trop volumineux, vous pouvez utiliser le paramè
 
 ```
 # Clone this repo on your computer
-git clone --depth 100 git@github.com:datagir/nosgestesclimat-site.git && cd nosgestesclimat-site
+git clone --depth 100 git@github.com:pascalbes/monmatchcarbone-site.git && cd monmatchcarbone-site
 
 # Install the Javascript dependencies through Yarn
 yarn install
@@ -40,7 +40,7 @@ yarn install
 yarn start
 ```
 
-Pour le développement local, il est important de cloner datagir/nosgestesclimat dans le même répertoire que celui-ci : ainsi les modèles sont chargées depuis votre disque, ce qui vous donne accès au rechargement à chaud de l'application si vous modifiez par exemple une question ou un facteur d'émission.
+Pour le développement local, il est important de cloner pascalbes/monmatchcarbone dans le même répertoire que celui-ci : ainsi les modèles sont chargées depuis votre disque, ce qui vous donne accès au rechargement à chaud de l'application si vous modifiez par exemple une question ou un facteur d'émission.
 
 L'application est exécutée sur https://localhost:8080.
 
@@ -71,53 +71,9 @@ Et ceux spécifiques au projet :
 -   :fountain_pen: `:fountain_pen:` pour séparer les commits liés à la modification du contenu
 -   :mag: `:mag:` pour les modifications liées au référencement naturel
 
-### Tests
-
-Pour l'instant, nous n'avons pas mis en place de tests, si ce n'est la relique de tests provenant du fait que ce dépôt est un clone de betagouv/mon-entreprise.
-
-Cela dit, la bibliothèque publicodes sur laquelle notre calcul est basée est bien testée.
-
-Nous privilégions pour l'instant une écoute attentive des retours utilisateurs : nous en avons eu et traité plus de 500 dans les 6 premiers mois du développement.
-
-### Traduction 👽
-
-> Le site n'est pas encore traduit, mais nous avons hâte de nous y mettre. Surtout que l'infrastructure de traduction est déjà embarquée depuis le fork de betagouv/mon-entreprise, expliquée ci-dessous :
-
-Le site est disponible en français, et en anglais sur https://mycompanyinfrance.com
-
-Les traductions se trouvent dans le répertoire `source/locales`.
-
-La librairie utilisée pour la traduction de l'UI est
-[react-i18next](https://react.i18next.com/).
-
-Lorsque l'on introduit une nouvelle chaîne de caractère dans l'UI il faut
-systématiquement penser à gérer sa traduction, via un composant `<Trans>`, ou
-via la fonction `t`
-
-Le circle-ci fait une analyse statique du code pour repérer les chaînes non
-traduites, dans le moteur et l'UI :
-
-```sh
-$ yarn run i18n:rules:check
-$ yarn run i18n:ui:check
-```
-
-Pour traduire automatiquement les chaînes manquantes via l'api Deepl :
-
-```sh
-$ yarn run i18n:rules:translate
-$ yarn run i18n:ui:translate
-```
-
-N'oubliez pas de vérifier sur le diff que rien n'est choquant.
-
 ### CI/CD
 
 -   [Netlify](https://www.netlify.com/), s'occupe de l’hébergement du site sur Internet sur internet avec gestion des DNS et diffusion du code sur un réseau de CDN. Le site est donc théoriquement fourni depuis des serveurs fonctionnant à l'électricité bas carbone française.
-
-### Analyse des bundles
-
-La commande `yarn stats` gènere une visualisation interactive du contenu packagé, à visualiser avec [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
 
 ### Publicodes
 

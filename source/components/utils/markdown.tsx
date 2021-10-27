@@ -38,7 +38,7 @@ export function LinkRenderer({
 		if (
 			href &&
 			href.startsWith(`https://${domain}`) &&
-			internalURLs[domain] === 'nosgestesclimat.fr'
+			internalURLs[domain] === 'monmatchcarbone.fr'
 		) {
 			return (
 				<Link to={href.replace(`https://${domain}`, '')} {...otherProps}>

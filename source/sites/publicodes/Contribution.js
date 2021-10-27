@@ -32,7 +32,7 @@ let createIssue = (title, body, setURL, disableButton) => {
 	fetch(
 		'https://publicodes.netlify.app/.netlify/functions/createIssue?' +
 			toPairs({
-				repo: 'datagir/nosgestesclimat',
+				repo: 'pascalbes/monmatchcarbone',
 				title,
 				body,
 				labels: ['contribution'],
@@ -127,7 +127,7 @@ export default ({}) => {
 
 ${fromLocation ? `Depuis la page : \`${fromLocation}\`` : ''}
 
-> Ce ticket a été créé automatiquement par notre robot depuis notre [page de contribution](https://nosgestesclimat.fr/contribuer).
+> Ce ticket a été créé automatiquement par notre robot depuis notre [page de contribution](https://monmatchcarbone.fr/contribuer).
 
 									`
 								createIssue(sujet, augmentedComment, setURL, disableButton)

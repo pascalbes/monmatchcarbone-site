@@ -5,7 +5,7 @@ export default () => (
 	<div>
 		<Meta
 			title="Données personnelles"
-			description="Nos gestes climat fonctionne sans serveur, donc vos données restent chez vous. Nous collectons anonymement des données aggregées pour améliorer le simulateur."
+			description="Mon Match Carbone fonctionne sans serveur, donc vos données restent chez vous. Nous collectons anonymement des données aggregées pour améliorer le simulateur."
 		/>
 		<h1>Données personnelles</h1>
 		<p>

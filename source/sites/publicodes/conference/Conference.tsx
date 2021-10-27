@@ -111,10 +111,10 @@ export default () => {
 			</p>
 			<p>
 				Seul le nom de la salle de conférence sera indexé dans{' '}
-				<a href="https://nosgestesclimat.fr/vie-privée">
+				<a href="https://monmatchcarbone.fr/vie-privée">
 					les statistiques d'utilisation
 				</a>{' '}
-				de Nos Gestes Climat.{' '}
+				de Mon Match Carbone.{' '}
 			</p>
 		</div>
 	)
@@ -155,7 +155,7 @@ const NamingBlock = ({ newRoom, setNewRoom }) => {
 			<p>
 				<em>
 					{emoji('🕵️‍♀️')} Le nom apparaitra dans nos{' '}
-					<a href="https://nosgestesclimat.fr/vie-privée">stats</a>.
+					<a href="https://monmatchcarbone.fr/vie-privée">stats</a>.
 				</em>
 			</p>
 
@@ -249,7 +249,7 @@ const Instructions = ({ room, newRoom, setNewRoom }) => (
 						'https://' + window.location.hostname + '/conférence/' + newRoom ||
 						room
 					}
-					title={'Nos Gestes Climat Conférence'}
+					title={'Mon Match Carbone Conférence'}
 				/>
 			)}
 		</InstructionBlock>

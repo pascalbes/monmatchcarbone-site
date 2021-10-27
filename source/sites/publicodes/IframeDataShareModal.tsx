@@ -48,7 +48,7 @@ export default ({ data }) => {
 				alimentation...), mais <em>pas</em> le détail question par question (vos
 				km en voiture, les m² de votre logement...).
 			</p>
-			<p>Nosgestesclimat.fr n'est pas affilié à {parent}.</p>
+			<p>monmatchcarbone.fr n'est pas affilié à {parent}.</p>
 		</div>
 	)
 

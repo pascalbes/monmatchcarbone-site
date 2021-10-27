@@ -7,7 +7,7 @@ fetch('https://ecolab-data.netlify.app/co2.json')
 	.then((json) => {
 		const documentationLines = Object.keys(json).map(
 			(dottedName) =>
-				`https://nosgestesclimat.fr/documentation/${encodeRuleName(dottedName)}`
+				`https://monmatchcarbone.fr/documentation/${encodeRuleName(dottedName)}`
 		)
 		const text = documentationLines.join('\n')
 		fs.writeFileSync('./sitemap.txt', lines + text, 'utf8')

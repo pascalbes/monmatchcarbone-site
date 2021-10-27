@@ -54,7 +54,7 @@ export default function News() {
 	return (
 		<>
 			<Meta
-				description="Découvrez les nouveautés de Nos Gestes Climat"
+				description="Découvrez les nouveautés de Mon Match Carbone"
 				title={`Nouveautés - version ${releaseName}`}
 				image={image}
 			/>
