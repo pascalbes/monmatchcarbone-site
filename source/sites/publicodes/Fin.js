@@ -370,22 +370,6 @@ const ActionButton = ({ text }) => (
 		color: white;
 		font-weight: bold;
 	}
-	span {
-		visibility: hidden;
-		width: 250px;
-		font-size: 14px;
-		background-color: black;
-		color: #fff;
-		text-align: center;
-		padding: 5px 0;
-		border-radius: 2px;
-		position: absolute;
-		z-index: 1;
-		margin-top: 110px;
-	}
-	a:hover span {
-		visibility: visible;
-	}
 	@media (max-width: 800px) {
 		p {
 			font-size: 20px;
@@ -393,11 +377,10 @@ const ActionButton = ({ text }) => (
 	}
 	`}
 		>
-	<Link to="/actions" onClick={ (event) => event.preventDefault() }>
+	<Link to="/actions">
 		<p>
 			{text} >
 		</p>
-		<span>Nous y travaillons, revenez vite passer à l'action !</span>
 	</Link>
 	</div>
 )
