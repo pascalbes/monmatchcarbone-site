@@ -15,6 +15,9 @@ export default ({ children, icon, to, onClick }) => (
 				color: var(--textColor);
 				text-decoration: none;
 			}
+			& :hover small {
+				color: white;
+			}
 		`}
 		onClick={onClick}
 	>
@@ -28,7 +31,8 @@ export default ({ children, icon, to, onClick }) => (
 					margin-left: 1.6rem;
 					text-align: left;
 					small {
-						color: var(--textColor);
+						color: var(--darkColor);
+						font-weight: 400;
 					}
 				}
 			`}
