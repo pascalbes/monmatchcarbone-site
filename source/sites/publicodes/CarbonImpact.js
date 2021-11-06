@@ -82,8 +82,13 @@ export default ({}) => {
 							{emoji('👤')} {persona}
 						</em>
 					)}
+					
 					<div>
+						{isMainSimulation && !persona && !simulationStarted ?
+						<SimulationHumanWeight nodeValue={2000} />
+						:
 						<SimulationHumanWeight nodeValue={nodeValue} />
+						}
 					</div>
 				</div>
 				<div>
