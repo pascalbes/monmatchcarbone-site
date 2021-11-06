@@ -11,7 +11,7 @@ export const humanWeight = (possiblyNegativeValue, concise = false) => {
 			? [v * 1000, 'g']
 			: v < 1000
 			? [v, 'kg']
-			: [v / 1000, concise ? 't' : v > 2000 ? 'tonnes' : 'tonne']
+			: [v / 1000, concise ? 't' : v >= 2000 ? 'tonnes' : 'tonne']
 
 	const signedValue = raw * (possiblyNegativeValue < 0 ? -1 : 1),
 		value =
