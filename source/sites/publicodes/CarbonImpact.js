@@ -85,7 +85,7 @@ export default ({}) => {
 					
 					<div>
 						{isMainSimulation && !persona && !simulationStarted ?
-						<SimulationHumanWeight nodeValue={2000} />
+						<SimulationHumanWeight nodeValue={9800} />
 						:
 						<SimulationHumanWeight nodeValue={nodeValue} />
 						}
