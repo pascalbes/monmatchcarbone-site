@@ -46,8 +46,6 @@ const sumFromDetails = (details) =>
 export default ({}) => {
 	const query = new URLSearchParams(useLocation().search)
 	const details = query.get('details')
-
-	console.log(details, query)
 	// details=a2.6t2.1s1.3l1.0b0.8f0.2n0.1
 	const encodedDetails = details,
 		rehydratedDetails =
@@ -60,9 +58,6 @@ export default ({}) => {
 				.map(([category, ...rest]) =>
 					category === 'b' ? ['d', ...rest] : [category, ...rest]
 				)
-	
-	console.log(details)
-
 	const score = sumFromDetails(rehydratedDetails)
 	const headlessMode =
 		!window || window.navigator.userAgent.includes('HeadlessChrome')
@@ -95,13 +90,15 @@ const AnimatedDiv = animated(({ score, value, details, headlessMode }) => {
 	const backgroundColor = getBackgroundColor(value).toHexString(),
 		backgroundColor2 = getBackgroundColor(value + 2000).toHexString(),
 		textColor = findContrastedTextColor(backgroundColor, true),
-		roundedValue = (value / 1000).toLocaleString('fr-FR', {
-			maximumSignificantDigits: 2,
-			minimumSignificantDigits: 2,
-		}),
-		integerValue = roundedValue.split(',')[0],
+		// roundedValue = (value / 1000).toLocaleString('fr-FR', {
+		// 	maximumSignificantDigits: 3,
+		// 	minimumSignificantDigits: 2,
+		// }),
+		roundedValueNum = Math.round(value/1000*10)/10,
+		roundedValue = roundedValueNum.toString(),
+		integerValue = roundedValue.split('.')[0],
 		unit = integerValue > 1 ? "tonnes" : "tonne",
-		decimalValue = roundedValue.split(',')[1],
+		decimalValue = roundedValue.split('.')[1],
 		shareImage =
 			'https://aejkrqosjq.cloudimg.io/v7/' +
 			window.location.origin +
