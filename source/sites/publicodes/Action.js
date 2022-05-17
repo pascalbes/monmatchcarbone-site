@@ -105,7 +105,7 @@ export default ({}) => {
 				</div>
 			</div>
 			<SessionBar answerButtonOnly />
-			{nextQuestions.length > 0 && (
+			{/* {nextQuestions.length > 0 && (
 				<>
 					<p>Personnalisez cette estimation</p>
 					<Simulation
@@ -116,7 +116,7 @@ export default ({}) => {
 						explanations={null}
 					/>
 				</>
-			)}
+			)} */}
 			{relatedActions && (
 				<>
 					<p>Sur le même sujet</p>
