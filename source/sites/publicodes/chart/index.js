@@ -21,7 +21,7 @@ const // Rough estimate of the 2050 budget per person to stay under 2° by 2100
 	transportShare = 1 / 4,
 	transportClimateBudget = climateBudgetPerDay * transportShare
 
-export default ({ details, noText, noAnimation, noCompletion, valueColor }) => {
+export default ({ details, noText, noAnimation, noCompletion, valueColor, inForm }) => {
 	// needed for this component to refresh on situation change :
 	const situation = useSelector(situationSelector)
 	const objectifs = useSelector(objectifsSelector)
@@ -42,8 +42,6 @@ export default ({ details, noText, noAnimation, noCompletion, valueColor }) => {
 		(memo, next) => (memo.nodeValue > next.nodeValue ? memo : next),
 		-1
 	).nodeValue
-
-	console.log(categories)
 
 	return (
 		<section
@@ -78,6 +76,19 @@ export default ({ details, noText, noAnimation, noCompletion, valueColor }) => {
 					`}
 					key="budget"
 				></span>
+				{inForm && <div css={`
+					margin-left: 2.8rem;
+					margin-right: 2.8rem;
+					p {
+						font-size: 14px;
+						line-height: 15px;
+						font-style: italic;
+					}
+					}
+					`}>
+					<h3>Répartition par catégorie</h3>
+					<p>Le graphique suivant présente la répartition des émissions de votre pratique sportive par catégories, en fonction de vos réponses et de valeurs attribuées par défaut.</p>
+				</div>}
 				<ul
 					css={`
 						height: 100%;
