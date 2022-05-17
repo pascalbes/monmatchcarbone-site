@@ -43,6 +43,8 @@ export default ({ details, noText, noAnimation, noCompletion, valueColor }) => {
 		-1
 	).nodeValue
 
+	console.log(categories)
+
 	return (
 		<section
 			css={`

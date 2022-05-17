@@ -38,11 +38,11 @@ export const MMCMonument = (props) => {
 			p:nth-child(3) {
 				font-family: 'Monument Bold';
 				font-size: 40px;
-				margin-bottom: 16px;
+				margin-bottom: 12px;
 			}
 			p:nth-child(4) {
 				font-family: 'Monument Bold';
-				font-size: 70px;
+				font-size: 55px;
 			}
 			@media (max-width: 800px) {
 				p {
@@ -61,14 +61,14 @@ export const MMCMonument = (props) => {
 					margin-bottom: 6px;
 				}
 				p:nth-child(4) {
-					font-size: 30px;
+					font-size: 24px;
 				}
 			}
 		`}>
 			<p>CALCULEZ</p>
-			<p>VOTRE EMPREINTE</p>
-			<p>CARBONE</p>
-			<p>SPORTIVE</p>
+			<p>L'IMPACT CARBONE</p>
+			<p>DE VOTRE</p>
+			<p>PRATIQUE SPORTIVE</p>
 		</div>
 	)
 }

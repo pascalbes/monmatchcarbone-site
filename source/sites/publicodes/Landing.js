@@ -90,7 +90,7 @@ export default () => {
 				}
 			`}>
 				<Link to="/simulateur/bilan">
-					<p>Commencez votre match ></p>
+					<p>Commencez le calcul ></p>
 				</Link>
 			</div>
 			

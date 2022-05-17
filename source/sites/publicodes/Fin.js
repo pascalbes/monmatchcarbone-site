@@ -147,7 +147,7 @@ const AnimatedDiv = animated(({ score, value, details, headlessMode }) => {
 					backgroundColor={backgroundColor}
 					headlessMode={headlessMode}
 				/>
-				{!integratorActionText && <ActionButton text="PASSER À L'ACTION" />}
+				{!integratorActionText && <ActionButton text="Réduire mon empreinte" />}
 				<div css={`
 					height: 35%;
 					width: 100%;
@@ -275,7 +275,7 @@ const FinalFootPrint = (props) => {
 				}
 			`}>
 				<p>{integerValue},<span>{decimalValue} {' '}{upperUnit}</span></p>
-				<p>empreinte sportive</p>
+				<p>empreinte sportive (en CO2eq)</p>
 			</div>
 			<div
 				css={`
@@ -307,7 +307,7 @@ const FinalFootPrint = (props) => {
 				}
 				`}
 			>
-				<p>Afin de respecter les accords de Paris, chaque français devrait avoir une empreinte globale de <span>2 tonnes</span>. </p>
+				<p>Afin de respecter les accords de Paris, chaque Français devrait avoir une empreinte globale de <span>2 tonnes</span>. </p>
 				<p>Vos pratiques sportives représentent environ <span>{carbonFootPrintPercentage}%</span> de cette valeur</p>
 			</div>
 			<div>

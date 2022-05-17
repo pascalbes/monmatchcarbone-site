@@ -12,7 +12,8 @@ import { useEngine } from 'Components/utils/EngineContext'
 import { correctValue, splitName } from '../../components/publicodesUtils'
 import { lightenColor } from '../../components/utils/colors'
 import Progress from 'Components/ui/Progress'
-import { useSimulationProgress } from 'Components/utils/useNextQuestion'
+import { useSimulationProgress } from 'Components/utils/useNextQuestion';
+import { extractCategories } from 'Components/publicodesUtils';
 
 export default ({}) => {
 	const objectif = useSelector(objectifsSelector)[0],
@@ -26,12 +27,15 @@ export default ({}) => {
 		simulationStarted = foldedSteps && foldedSteps.length,
 		persona = useSelector((state) => state.simulation?.persona)
 
-	const nodeValue = correctValue({ nodeValue: rawNodeValue, unit })
+	// const nodeValue = correctValue({ nodeValue: rawNodeValue, unit })
 
 	const category = rules[splitName(dottedName)[0]],
 		color = category && category.couleur
 
-	const isMainSimulation = objectif === 'bilan'
+	const categories = extractCategories(rules, engine);
+	const currentTotal = categories.reduce((total, category) => total + category.nodeValue, 0);
+
+	const isMainSimulation = objectif === 'bilan';
 
 	const progress = useSimulationProgress()
 	return (
@@ -87,7 +91,7 @@ export default ({}) => {
 						{isMainSimulation && !persona && !simulationStarted ?
 						<SimulationHumanWeight nodeValue={9800} />
 						:
-						<SimulationHumanWeight nodeValue={nodeValue} />
+						<SimulationHumanWeight nodeValue={currentTotal} />
 						}
 					</div>
 				</div>
