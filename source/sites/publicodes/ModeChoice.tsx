@@ -15,12 +15,12 @@ export default ({}) => {
 			`}
 		>
 			<div>
-				<h1>Passer à l'action</h1>
+				<h1>Réduire mon empreinte</h1>
 				<p>Votre mission : réduire votre empreinte.</p>
 				<p>Comment voulez-vous procéder ?</p>
 			</div>
 			<div>
-				<IllustratedButton
+				{/* <IllustratedButton
 					icon="🐣"
 					to="/actions"
 					onClick={() => dispatch(setActionMode('guidé'))}
@@ -31,7 +31,7 @@ export default ({}) => {
 							<small>On vous propose une sélection graduelle de gestes.</small>
 						</p>
 					</div>
-				</IllustratedButton>
+				</IllustratedButton> */}
 				<IllustratedButton
 					to="/actions"
 					icon="🐓"

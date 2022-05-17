@@ -119,7 +119,7 @@ export default function SessionBar({
 				}}
 			>
 				{emoji('💥 ')}
-				Passer à l'action
+				Réduire mon empreinte
 			</Button>,
 		]
 	} else if (path.includes('/fin') || path.includes('/actions')) {
@@ -176,7 +176,7 @@ export default function SessionBar({
 							onClick={() => history.push('/actions')}
 						>
 							{emoji('💥 ')}
-							Passer à l'action
+							Réduire mon empreinte
 						</Button>,
 						NODE_ENV === 'development' && (
 							<Button
