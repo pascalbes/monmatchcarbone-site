@@ -248,7 +248,7 @@ const FinalFootPrint = (props) => {
 					color: white;
 					margin-bottom: 8px;
 				}
-				p:last-child {
+				p:last-child, #co2 {
 					font-size: 28px;
 					font-weight: 300;
 					font-family: 'Montserrat';
@@ -266,7 +266,7 @@ const FinalFootPrint = (props) => {
 						color: white;
 						margin-bottom: 4px;
 					}
-					p:last-child {
+					p:last-child, #co2 {
 						font-size: 20px;
 						font-weight: 300;
 						font-family: 'Montserrat';
@@ -274,8 +274,8 @@ const FinalFootPrint = (props) => {
 					}
 				}
 			`}>
-				<p>{integerValue},<span>{decimalValue} {' '}{upperUnit}</span></p>
-				<p>empreinte sportive (en CO2eq)</p>
+				<p>{integerValue},<span>{decimalValue} {' '}{upperUnit}</span> <span id="co2">CO2eq</span></p>
+				<p>générée(s) par votre pratique sportive<br/></p>
 			</div>
 			<div
 				css={`
